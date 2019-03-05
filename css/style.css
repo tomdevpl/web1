@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:visited,
+a:link,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 7vh;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* background-color: #555; */
+}
+
+.compName {
+  /* background-color: #555; */
+  margin: 0.5rem;
+  width: 90%;
+  padding-left: 33%;
+}
+
+.compName p a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-container {
+  padding: 1rem 3rem 0rem 3rem;
+  width: 100vw;
+  height: 93vh;
+  display: flex;
+  /* background-color: #777; */
+}
+
+/* Left side */
+
+.conLeft {
+  width: 50%;
+  /* background-color: #999; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conLeft p.link {
+  padding-bottom: 0.5rem;
+}
+
+.conLeft p.link span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.conLeft h2 {
+  padding-bottom: 1rem;
+}
+
+.conLeft p {
+  padding-bottom: 2rem;
+  font-weight: normal;
+}
+
+.conLeft a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 0.8rem;
+  width: 170px;
+  text-align: center;
+}
+
+.conLeft a:hover {
+  background-color: #333;
+}
+
+/* Right side */
+
+.conRight {
+  position: relative;
+  width: 50%;
+  /* background-color: #333; */
+  background-image: url("../img/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.conRight div#angleRight {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0%;
+  bottom: 30%;
+  margin: 0 auto;
+}
+
+.conRight div#angleRight .fas {
+  color: #555;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  transition: 0.2s;
+  cursor: pointer;
+  animation-name: move2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move2 {
+  0% {
+    margin-right: 0rem;
+  }
+
+  20% {
+    margin-right: 0.3rem;
+  }
+
+  10% {
+    margin-right: 0rem;
+  }
+
+  15% {
+    margin-right: 0.3rem;
+  }
+
+  20% {
+    margin-right: 0rem;
+  }
+
+  /* 100% {
+    margin-right: 0rem;
+  } */
+}
+
+.conRight div#angleRight .fas:hover {
+  margin-left: 0.3rem;
+}
+
+.conRight div#angleLeft {
+  background-color: #555;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: calc(0% - 50px);
+  bottom: calc(30% - 50px);
+  margin: 0 auto;
+}
+
+.conRight div#angleLeft .fas {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  transition: 0.2s;
+  cursor: pointer;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    margin-right: 0rem;
+  }
+
+  5% {
+    margin-right: 0.3rem;
+  }
+
+  10% {
+    margin-right: 0rem;
+  }
+
+  15% {
+    margin-right: 0.3rem;
+  }
+
+  20% {
+    margin-right: 0rem;
+  }
+
+  100% {
+    margin-right: 0rem;
+  }
+}
+
+.conRight div#angleLeft .fas:hover {
+  margin-right: 0.3rem;
+}
+
+/* navBottom */
+
+.main-container div.navBottom {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  height: 6vh;
+  background-color: #555;
+  color: #999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 0.7rem;
+  padding: 0 3rem 0 3rem;
+}
+
+.main-container div.navBottom div {
+  padding: 0.2rem;
+}
+
+.main-container div.navBottom div.separator {
+  width: 50px;
+  height: 1px;
+  background-color: #999;
+  display: block;
+  padding: 0;
+}
+
+.active {
+  color: #fff;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+/* Burger menu */
+
+.burger {
+  width: 10%;
+  /* background-color: #888; */
+  margin: 0.5rem;
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.burger:hover {
+  cursor: pointer;
+  color: #333;
+  padding-left: 0.2rem;
+}
+
+aside {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* height: 100vh; */
+  left: -100vw;
+  /* right: 0; */
+  /* width: 100vw; */
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  transition: 0.1s;
+  z-index: 4;
+  transition: 0.5s;
+}
+
+aside.show {
+  left: 0;
+  right: 0;
+}
+
+aside nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+nav a {
+  padding: 0.2rem;
+  color: black;
+  transition: 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.fas {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Portraits orientation */
+@media only screen and (orientation: portrait) and (min-device-width: 320px) and (max-device-width: 539px) {
+  .compName {
+    padding-left: 23%;
+  }
+
+  .main-container {
+    padding: 0rem 0rem 0rem 3rem;
+  }
+
+  .conLeft {
+    position: absolute;
+    width: 80%;
+    padding: 2rem;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 0px 0px 2px #000;
+  }
+
+  .conLeft p.link {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .conLeft h2 {
+    padding-bottom: 2rem;
+  }
+
+  .conLeft p {
+    padding-bottom: 2rem;
+    font-weight: normal;
+  }
+
+  .conLeft a {
+    position: absolute;
+    right: 10%;
+    bottom: -10%;
+    padding: 0.4rem;
+    width: 120px;
+    font-size: 0.7rem;
+  }
+
+  .conRight {
+    position: relative;
+    width: 100%;
+  }
+
+  .conRight div#angleRight {
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+  }
+
+  .conRight div#angleRight .fas {
+    line-height: 40px;
+  }
+
+  .conRight div#angleLeft {
+    width: 40px;
+    height: 40px;
+    left: calc(0% - 40px);
+    bottom: 0;
+  }
+
+  .conRight div#angleLeft .fas {
+    line-height: 40px;
+  }
+
+  .main-container div.navBottom {
+    display: none;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-device-width: 540px) and (max-device-width: 1024px) {
+  .header {
+    font-size: 3rem;
+  }
+
+  .compName {
+    padding-left: 35%;
+  }
+
+  .main-container {
+    padding: 0rem 0rem 0rem 2rem;
+    justify-content: flex-end;
+  }
+
+  .conLeft {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    padding: 2rem;
+    padding-top: 5rem;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 0px 0px 4px #000;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .conLeft p.link {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .conLeft h2 {
+    padding-bottom: 4rem;
+  }
+
+  .conLeft p {
+    padding-bottom: 2rem;
+    font-weight: normal;
+  }
+
+  .conLeft a {
+    padding: 0.9rem;
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .conRight {
+    width: 95%;
+  }
+
+  .conRight div#angleRight {
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: calc(0% + 100px);
+  }
+
+  .conRight div#angleRight .fas {
+    line-height: 100px;
+    font-size: 5rem;
+  }
+
+  .conRight div#angleLeft {
+    width: 100px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+  }
+
+  .conRight div#angleLeft .fas {
+    line-height: 100px;
+    font-size: 5rem;
+  }
+
+  .main-container div.navBottom {
+    display: none;
+  }
+}
+
+/* Landscape */
+@media only screen and (orientation: Landscape) and (min-device-height: 319px) and (max-device-height: 420px) {
+  .header {
+    font-size: 1rem;
+  }
+
+  .main-container {
+    padding: 0.8rem 0.8rem 0rem 0rem;
+  }
+
+  .conLeft {
+    font-size: 0.6rem;
+  }
+
+  .conLeft a {
+    padding: 0.3rem;
+    width: 80px;
+    font-size: 0.5rem;
+  }
+
+  .conRight div#angleRight {
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    left: calc(0% + 30px);
+  }
+
+  .conRight div#angleRight .fas {
+    line-height: 30px;
+    font-size: 1rem;
+  }
+
+  .conRight div#angleLeft {
+    width: 30px;
+    height: 30px;
+    left: 0;
+    bottom: 0;
+  }
+
+  .conRight div#angleLeft .fas {
+    line-height: 30px;
+    font-size: 1rem;
+  }
+
+  .main-container div.navBottom {
+    display: none;
+  }
+}
